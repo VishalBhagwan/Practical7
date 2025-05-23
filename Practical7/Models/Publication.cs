@@ -8,6 +8,7 @@ namespace Practical7.Models
     public abstract class Publication
     {
         public Author Author { get; set; }
+        public string LeadingImage { get; set; }
         public string Title {  get; set; }
         public string Summary { get; set; }
         public string MStoryURL { get; set; }
