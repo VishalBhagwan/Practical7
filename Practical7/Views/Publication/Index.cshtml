@@ -9,7 +9,7 @@
     <h2 class="mb-4">Publications</h2>
 
     <div class="row">
-        @foreach (var item in Model)
+       @foreach (var item in Model)
         {
             <div class="col-md-4 mb-4">
                 <div class="card h-100 border-2 shadom-sm">
@@ -18,7 +18,7 @@
 
                         <p>@(item.GetTypeInfo())</p>
 
-                        <p class="card-title ms-3">@item.Title</p>
+                        <p class="ms-3">@item.Title</p>
 
                         <p>
                             by @item.Author.AuthorName
