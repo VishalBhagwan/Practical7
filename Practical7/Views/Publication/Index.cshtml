@@ -1,0 +1,41 @@
+﻿
+@model List<Practical7.Models.Publication>
+
+@{
+    ViewBag.Title = "Publication List";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Publications</h2>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-2 shadom-sm">
+                    <div class="card-body d-flex flex-column">
+                        <p>@(item.GetTypeInfo())</p>
+
+                        <p class="card-title ms-3">@item.Title</p>
+
+                        <p>
+                            by @item.Author.AuthorName
+                        </p>
+
+                        <p class="card-text">@item.Summary</p>
+
+                        <a href="@item.MStoryURL" class="text-decoration-none text-primary ms-3" target="_blank">Read More</a>
+
+                        <div class="mb-2"></div>
+
+                        <p>
+                            @(item.GetDateInfo()) @(item.GetDayOfWeek()), @(item.PublicationDate.ToString("dd MMMM yyyy")) @(item.GetPublicationInfo())
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
